@@ -1,0 +1,14 @@
+import React from 'react'
+
+const Stripe = ({val}) => {
+    console.log(val);
+   
+  return (
+    <div className='w-1/6 px-4 py-3 border-[0.01px] border-zinc-200 bg-zinc-300 text-black flex items-center justify-between'>
+        <img className='w-40' src={val.url} style={{color:"white"}} alt="" />
+        <span>{val.num}</span>
+    </div>
+  )
+}
+
+export default Stripe
