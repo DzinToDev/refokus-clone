@@ -38,7 +38,7 @@ const Products = () => {
     setPos(val * 20);
   };
   return (
-    <div className="py-10 mt-10 relative">
+    <div className="py-10 mt-32 relative">
       {products.map((val, index) => (
         <Product key={index} val={val} mover={move} count={index} />
       ))}
