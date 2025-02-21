@@ -3,7 +3,9 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 const Card = ({ width, start, para, hover }) => {
   return (
-    <div className={`${width} hover:bg-purple-500 p-6 bg-zinc-700 rounded-xl min-h-[32vw] flex flex-col justify-between`}>
+    <div
+      className={`${width} hover:bg-purple-500 p-6 bg-zinc-700 rounded-xl min-h-[32vw] flex flex-col justify-between`}
+    >
       <div className="w-full h-full">
         <div className="flex capitalize items-center justify-between ">
           <h3 className="capitalize ">up next: culutre</h3>
@@ -26,7 +28,7 @@ const Card = ({ width, start, para, hover }) => {
 
         {para && (
           <>
-            <p className="text-sm" >
+            <p className="text-sm">
               Web design, Webflow Development and Creatice Development.
             </p>
           </>

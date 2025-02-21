@@ -36,11 +36,13 @@ const Marquees = () => {
       "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6666ed38989e70633b7658b5_Singularity_logo.svg",
       "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6696b1b881b51b8bea94556c_Logo-lockup-black.svg",
       "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6694f0ff430a1585cff47451_botify-black.svg",
-    ]
+    ],
   ];
   return (
     <div className="py-20">
-     {marqImages.map( elem =>  <Marquee imagesUrl = {elem}/>)}
+      {marqImages.map((elem, index) => (
+        <Marquee key={index} imagesUrl={elem} />
+      ))}
     </div>
   );
 };

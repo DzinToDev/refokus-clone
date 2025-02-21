@@ -47,7 +47,7 @@ const WorkHero = () => {
         {images.map(
           (elem, index) =>
             elem.isActive && (
-              <img
+              <img key={index}
                 className="w-66 absolute -translate-x-1/2 -translate-y-1/2"
                 src={elem.url}
                 style={{ top: elem.top, left: elem.left }}
