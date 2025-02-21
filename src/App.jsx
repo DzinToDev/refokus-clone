@@ -1,3 +1,4 @@
+import Marquees from "./components/Marquees"
 import Navbar from "./components/Navbar"
 import Products from "./components/Products"
 import Stripes from "./components/Stripes"
@@ -15,6 +16,7 @@ function App() {
     <WorkHero />
     <Stripes />
     <Products />
+    <Marquees />
    </div>
   )
 }
