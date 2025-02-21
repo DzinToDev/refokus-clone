@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
 
 const WorkHero = () => {
-  var images = [
+  const [images, setImages] = useState([
     {
       url: "https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66c3bb125095523f5ce87a2a_9-p-800.webp",
       top: "44%",
       left: "50%",
-      isActive: true,
+      isActive: false,
     },
     {
       url: "https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66c3bb13c9d1cdce681e0e73_10-p-800.webp",
@@ -38,7 +44,48 @@ const WorkHero = () => {
       left: "49%",
       isActive: false,
     },
-  ];
+  ]);
+
+  const { scrollYProgress } = useScroll();
+
+  scrollYProgress.on("change", (data) => {
+    function showImage(arr) {
+      setImages((pre) =>
+        pre.map((item, index) =>
+          arr.indexOf(index) === -1
+            ? { ...item, isActive: false }
+            : { ...item, isActive: true }
+        )
+      );
+    }
+
+    switch (Math.floor(data * 100)) {
+      case 0:
+        showImage([]);
+        break;
+      case 2:
+        showImage([0]);
+        break;
+      case 3:
+        showImage([0, 1]);
+        break;
+      case 4:
+        showImage([0, 1, 2]);
+        break;
+      case 5:
+        showImage([0, 1, 2, 3]);
+        break;
+      case 6:
+        showImage([0, 1, 2, 3, 4]);
+        break;
+      case 7:
+        showImage([0, 1, 2, 3, 4, 5]);
+        break;
+      case 8:
+        showImage([0, 1, 2, 3, 4, 5, 6]);
+        break;
+    }
+  });
 
   return (
     <div className="max-w-screen-xl mx-auto text-center relative">
