@@ -17,6 +17,7 @@ A modern React-based clone of Refokus.com, featuring smooth animations and inter
 
 ## 🛠️ Built With
 - React.js
+- GSAP
 - Framer Motion
 - Tailwind CSS
 
