@@ -28,4 +28,6 @@ A modern React-based clone of Refokus.com, featuring smooth animations and inter
 - Developed responsive layouts using Tailwind CSS
 - Applied practical React concepts in a real-world project
 
-## 🎯 Getting Started
+## 🙏 Acknowledgments
+- Tutorial by Harsh Sharma bhaiya - sheryians coding school
+- Design inspiration from [Refokus](https://www.refokus.com/)
